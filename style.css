@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+ 
+ 
+ }
+ /* HEDER */
+ 
+ .header{ 
+     grid-area: header;
+     background-color: #e1aeb4fd;
+     font-family: avenir_ff;
+     box-sizing: border-box;	
+     display: flex;
+     flex-direction: row;
+     align-items: center;	
+ }
+ 
+ .logo-header{
+     width: 20%;
+     height: 90%;
+     display: flex;
+     box-sizing: border-box;	
+     justify-content: center;
+     align-items: center;
+     /*background-color: bisque;*/
+ 
+ }
+ 
+ 
+ .logo-header a{
+     display: flex;
+     box-sizing: border-box;	
+     justify-content: center;
+     align-items: center;
+     /*background-color: aqua;*/
+ 
+ }
+ 
+ .img-logo-header:hover{
+     opacity: 0.2;
+     transition: all 2s;
+ }
+ 
+ .img-logo-header{
+     display: flex;
+     width: 50%;
+     box-sizing: border-box;	
+     border-radius: 50%;
+     align-items: center;
+     /*outline: 1px solid black;*/
+ }
+ 
+ .nav{
+     width: 80%;
+     display: flex;
+     justify-content: flex-end;			
+ }
+ 
+ .nav-header{
+     width: 80%;
+     display: flex;
+     box-sizing: border-box;	
+     justify-content: center;
+     align-items: center;
+     /*background-color: blueviolet;*/
+ }
+ 
+ .nav-header li{
+     padding: 2%;
+     /*background-color: rgb(43, 226, 73);*/
+ }
+ 
+ .link-nav-header{
+     color: #146d4e;
+     font-size: 20px;
+     /*outline: 1px solid hotpink;*/
+     
+ }
+ 
+ /* seccion - INICIO */
+ 
+ .container1{
+     display: grid;
+     box-sizing: border-box;
+     min-height: 100vh;
+     grid-template-areas:
+     "header header header"
+     "inicio-p1 inicio-fotos inicio-fotos"
+     "inicio-p1 inicio-p2 inicio-p2"
+     "footer footer footer";
+     grid-template-columns: 30% 1fr 1fr;
+     grid-template-rows: 15% auto 10% 10%;
+ }
+ 
+ .inicio-fotos{
+     grid-area: inicio-fotos;
+     display: flex;
+     box-sizing: border-box;	
+     justify-content: center;
+     align-items: center;
+     padding: 5%;
+     background-image: url(./imagenes/fondo2.png);
+     background-size: cover;
+     
+ }
+ .inicio-fotos img{
+     box-sizing: border-box;	
+     width: 100%;
+ }
+ 
+ .inicio-p1{
+     grid-area: inicio-p1;
+     display: flex;
+     box-sizing: border-box;	
+     background-color: #facfd5fd;
+     font-family: avenir_ff;
+     font-size: 15px;
+     color: #146d4e;
+     font-weight: bold;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     padding: 20%;
+     
+ }
+ .inicio-p1 h1{
+     margin-bottom: 50%;
+ 
+ }
+ 
+ .inicio-p1 h1:hover{
+     animation: movement 4s;
+ }
+ 
+ @keyframes movement {
+         0% {
+             opacity: 0.2;
+             transition: all;
+         }
+     
+         25% {
+             transform: translateY(-20px);
+         }
+ 
+         50%{
+             
+             font-size: 25px;
+             transition: all;
+         }
+     
+ }
+ 
+ .inicio-p2{
+     grid-area: inicio-p2;
+     display: flex;
+     box-sizing: border-box;	
+     font-family: avenir_ff;
+     font-size: 15px;
+     color: #146d4ebc;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     background-color: #facfd5fd;
+     background-size: cover;
+     
+ }
+ 
+ 
+ /* seccion - NOSOTROS */
+ 
+ .container2{
+     display: grid;
+     box-sizing: border-box;
+     min-height: 100vh;
+     grid-template-areas:
+     "header      header "
+     "nosotros-p1 nosotros-foto"
+     "footer      footer";
+     grid-template-columns: 40% 60%;
+     grid-template-rows: 15% auto 10%;
+ }
+ .nosotros-p1{
+     grid-area: nosotros-p1;
+     display: flex;
+     box-sizing: border-box;
+     justify-content: center;
+     align-items: center;
+     background-image: url(./imagenes/fondo2.png);
+     background-position: center;
+     background-attachment: contain;
+     background-size: cover;
+     
+ }
+ .p-nosotros{
+     font-family: avenir_ff;
+     font-size: 18px;
+     color: #146d4e;
+     text-align: justify;
+     width: 80%;
+ }
+ 
+ .nosotros-foto{
+     grid-area: nosotros-foto;
+     display: flex;
+     box-sizing: border-box;
+     justify-content: center;
+     background-color: #f8daddfd;
+     
+ }
+ 
+ .nosotros-foto img{
+     align-items: center;
+ }
+ 
+ 
+ 
+ /* seccion - CAFETERIA 
+ En esta seccion el fondo queda detras de la barra de navegacion y todavía no pude corregirlo*/
+ 
+ .cafeteria{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-image: url(./imagenes/fondo.png);
+     background-position: center;
+     background-attachment: contain;
+     background-size: cover;
+     box-sizing: border-box;
+ }
+ 
+ .video-cafeteria{
+     width: 80%;
+     height: 500px;
+     padding-top: 20px;
+ }
+ 
+ .p-cafeteria{
+     width: 70%;
+     font-family: avenir_ff;
+     font-size: 20px;
+     color: #146d4e;
+     text-align: center;
+     padding: 20px 0px;
+ 
+ }
+ 
+ /* seccion - PRODUCTOS 
+ Queda por trabajar las imagenes y las secciones que estan por debajo*/
+ 
+ .productos{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     background-image: url(./imagenes/fondo.png);
+     background-position: center;
+     background-attachment: contain;
+     background-size: cover;
+     box-sizing: border-box;
+ }
+ 
+ .lista-productos{
+     width: 90%;
+     display: flex;
+     box-sizing: border-box;
+     flex-direction: column;
+     padding: 20px;
+ 
+ }
+ .item1-lista-productos{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 20px;
+ 
+ }
+ 
+ .item1-lista-productos h2 a{
+     font-family: avenir_ff;
+     font-size: 30px;
+     color: #146d4e;
+     padding-right: 20px;
+ }
+ 
+ .item2-lista-productos{
+     display: flex;
+     flex-direction:row-reverse;
+     align-items: center;
+     padding: 20px;
+ }
+ .item2-lista-productos h2 a{
+     font-family: avenir_ff;
+     font-size: 30px;
+     color: #146d4e;
+     padding-left: 20px;
+ }
+ 
+ .item3-lista-productos{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 20px;
+ }
+ .item3-lista-productos h2 a{
+     font-family: avenir_ff;
+     font-size: 30px;
+     color: #146d4e;
+     padding-right: 20px;
+ }
+ 
+ .img-productos{
+     width: 300px;
+ }
+ 
+ 
+ /* seccion - CONTACTOS 
+ en esta seccion todavía no decido la disposición de las cosas */
+ 
+ .contacto{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-image: url(./imagenes/fondo2.png);
+     background-position: center;
+     background-attachment: contain;
+     background-size: cover;
+     box-sizing: border-box;
+     font-family: avenir_ff;
+ }
+ 
+ .titulo-contacto{
+     font-size: 30px;
+     color: #146d4e;
+     padding-top: 10px;
+     padding-bottom: 30px;
+ }
+ 
+ .contacto p{
+     color: #146d4e;
+     padding-top: 10px;
+     padding-bottom: 30px;	
+ }
+ 
+ .contacto i{
+     font-size: 60px;
+     padding-top: 20px;
+ }
+ 
+ 
+ /* FOOTER */
+ 
+ footer{
+     grid-area: footer;
+     font-family: avenir_ff;
+     background-color: #e1aeb4fd;
+     box-sizing: border-box;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+ }
+ 
+ .logo-footer{
+     box-sizing: border-box;	
+     display: flex;
+     width: 20%;
+     justify-content: center;
+     /*background-color: chartreuse;*/
+ }
+ 
+ .logo-footer img{
+     display: flex;
+     box-sizing: border-box;	
+     width: 30%;
+     border-radius: 50%;	
+ }
+ 
+ .dire-footer{
+     width: 45%;
+     /*background-color: rgb(255, 0, 149);*/
+ }
+ 
+ .dire-footer p {
+     color: #146d4e;
+     font-size: 12px;
+     
+ }
+ 
+ .tel-footer{
+     width: 20%;
+     display: flex;
+     align-items: center;
+     /*background-color: chartreuse;*/
+ }
+ 
+ .tel-footer p {
+     color: #146d4e;
+     font-size: 12px;
+     
+ }
+ 
+ .redes-footer{
+     width: 15%;
+     display: flex;
+     /*background-color: coral;*/
+ }
+  
+ .fa-brands{
+     color: #146d4e;
+     font-size: 40px;
+     padding: 10px;
+     
+ }
+ 
